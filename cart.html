@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inkwell — Your Cart</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body class="content">
+  <div class="card">
+    <h1>Your Cart</h1>
+    <table class="cart-table">
+      <tr>
+        <th>Cover</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Amount</th>
+        <th>Action</th>
+      </tr>
+      <tr id="row-1">
+        <td>
+          <svg class="cover" viewBox="0 0 46 62" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="62" fill="#16233b"/>
+            <rect width="6" height="62" fill="rgba(0,0,0,0.25)"/>
+            <rect x="10" y="10" width="30" height="3" fill="#fffdf7" fill-opacity="0.85"/>
+            <text x="23" y="46" font-family="Lora, serif" font-size="14" fill="#fffdf7" text-anchor="middle" font-weight="600">IA</text>
+          </svg>
+        </td>
+        <td>Introduction to Algorithms</td>
+        <td>T. Cormen</td>
+        <td class="price">$89.99</td>
+        <td>
+          <div class="qty-controls">
+            <button type="button" onclick="changeQty('1', -1)">−</button>
+            <span id="qty-1" data-price="89.99">1</span>
+            <button type="button" onclick="changeQty('1', 1)">+</button>
+          </div>
+        </td>
+        <td class="price" id="amt-1">$89.99</td>
+        <td><a href="#" class="remove-link" onclick="removeRow('1'); return false;">Remove</a></td>
+      </tr>
+      <tr id="row-2">
+        <td>
+          <svg class="cover" viewBox="0 0 46 62" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="62" fill="#7a2e2e"/>
+            <rect width="6" height="62" fill="rgba(0,0,0,0.25)"/>
+            <rect x="10" y="10" width="30" height="3" fill="#fffdf7" fill-opacity="0.85"/>
+            <text x="23" y="46" font-family="Lora, serif" font-size="14" fill="#fffdf7" text-anchor="middle" font-weight="600">DS</text>
+          </svg>
+        </td>
+        <td>Digital Signal Processing</td>
+        <td>John G. Proakis</td>
+        <td class="price">$68.50</td>
+        <td>
+          <div class="qty-controls">
+            <button type="button" onclick="changeQty('2', -1)">−</button>
+            <span id="qty-2" data-price="68.50">2</span>
+            <button type="button" onclick="changeQty('2', 1)">+</button>
+          </div>
+        </td>
+        <td class="price" id="amt-2">$137.00</td>
+        <td><a href="#" class="remove-link" onclick="removeRow('2'); return false;">Remove</a></td>
+      </tr>
+    </table>
+    <p class="cart-total">Total: <span id="cartTotal">$226.99</span></p>
+    <div class="btn-row">
+      <button type="button" onclick="alert('This is a static demo — checkout is not connected to payment processing.')">Proceed to checkout</button>
+    </div>
+  </div>
+</body>
+</html>
